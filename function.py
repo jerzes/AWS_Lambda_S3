@@ -18,7 +18,7 @@ def lambda_handler(event, context):
     with open(upload_path, 'w+') as f:
         f.write(added_file)
     s3.upload_file(upload_path, bucketname, filename)
-    msg = 'File ' + added_file + ' have been added!'
+    msg = 'File ' + added_file + ' has been added!'
     logger.info(msg)
     return {
         'statusCode': 200,
